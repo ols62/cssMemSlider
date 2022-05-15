@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,800);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #333;
+	font-family: "Open Sans";
+}
+
+section {
+	margin: 5rem;
+}
+
+span {
+	font-size: 1.2em;
+}
+
+.wrapper {
+	width: 60vw;
+	margin: auto;
+	background: #6b6969;
+}
+
+.wrapper input {
+	display: none;
+}
+cls
+.wrapper section {
+	display: flex;
+	flex-direction: column;
+	border: 3px solid #d4d4d4;
+	margin-bottom: 2rem;
+	border-radius: 1.4rem;
+	overflow: hidden;
+}
+
+.wrapper article:nth-child(1) {
+	display: flex;
+	transition: ease-in-out .5s;
+}
+
+.wrapper article:nth-child(2) {
+	display: flex;
+	flex-direction: row;
+}
+
+article:nth-child(1) img {
+	width: 100%;
+}
+
+.controls {
+	display: flex;
+	flex-direction: row;
+	background-color: aqua;
+}
+
+.controls label {
+	margin: 0.5em;
+	width: 2rem;
+	height: 2rem;
+	background: #222;
+	cursor: pointer;
+	transition: background-color .7s;
+	border-radius: 50%;
+	border: 0.25rem solid white;
+}
+
+.wrapper input:nth-child(1):checked~section>article:nth-child(2)>.controls>label[for="button-1"],
+.wrapper input:nth-child(2):checked~section>article:nth-child(2)>.controls>label[for="button-2"],
+.wrapper input:nth-child(3):checked~section>article:nth-child(2)>.controls>label[for="button-3"],
+.wrapper input:nth-child(4):checked~section>article:nth-child(2)>.controls>label[for="button-4"],
+.wrapper input:nth-child(5):checked~section>article:nth-child(2)>.controls>label[for="button-5"] {
+	background: red;
+}
+
+.wrapper input:nth-child(1):checked~section>article:nth-child(1) {
+	transform: translateX(0%);
+}
+
+.wrapper input:nth-child(2):checked~section>article:nth-child(1) {
+	transform: translateX(-100%);
+}
+
+.wrapper input:nth-child(3):checked~section>article:nth-child(1) {
+	transform: translateX(-200%);
+}
+
+.wrapper input:nth-child(4):checked~section>article:nth-child(1) {
+	transform: translateX(-300%);
+}
+
+.wrapper input:nth-child(5):checked~section>article:nth-child(1) {
+	transform: translateX(-400%);
+}
