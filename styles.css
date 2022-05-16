@@ -44,6 +44,7 @@ span {
 }
 
 .wrapper section:last-of-type {
+	margin-top: 1rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -70,34 +71,39 @@ article:nth-of-type(1) img {
 
 .controls {
 	display: flex;
-	border: solid 1px white;
 }
 
 .controls label {
-	margin: 0.5em;
-	width: 1rem;
-	height: 1rem;
-	background: var(--color-control-l);
 	cursor: pointer;
+	padding: .5rem .5rem .9rem .5rem;
+}
+
+.bnt {
+	display: flex;
+	width: 1.5rem;
+	height: 1.5rem;
+	box-sizing: border-box;
+	background: var(--color-control-l);
 	transition: background-color .7s;
 	border-radius: 50%;
 	border: 0.25rem solid var(--color-control-l);
+
 }
 
-.controls label:hover {
+.controls label:hover .bnt {
 	background: var(--color-control-xl);
 	border-color: var(--color-control-xl);
 }
 
-.controls label:active {
+.controls label:active .bnt {
 	background: var(--color-background);
 }
 
-.wrapper input:nth-child(1):checked~section:last-of-type>article:first-child>.controls>label[for="button-1"],
-.wrapper input:nth-child(2):checked~section:last-of-type>article:first-child>.controls>label[for="button-2"],
-.wrapper input:nth-child(3):checked~section:last-of-type>article:first-child>.controls>label[for="button-3"],
-.wrapper input:nth-child(4):checked~section:last-of-type>article:first-child>.controls>label[for="button-4"],
-.wrapper input:nth-child(5):checked~section:last-of-type>article:first-child>.controls>label[for="button-5"] {
+.wrapper input:nth-child(1):checked~section:last-of-type>article:last-child>.controls>label[for="button-1"]>span,
+.wrapper input:nth-child(2):checked~section:last-of-type>article:last-child>.controls>label[for="button-2"]>span,
+.wrapper input:nth-child(3):checked~section:last-of-type>article:last-child>.controls>label[for="button-3"]>span,
+.wrapper input:nth-child(4):checked~section:last-of-type>article:last-child>.controls>label[for="button-4"]>span,
+.wrapper input:nth-child(5):checked~section:last-of-type>article:last-child>.controls>label[for="button-5"]>span {
 	background: var(--color-background);
 }
 
@@ -133,7 +139,7 @@ article:nth-of-type(1) img {
 	}
 
 	.wrapper section:last-of-type {
-		flex-direction: column;
+		flex-direction: column-reverse;
 	}
 
 }
