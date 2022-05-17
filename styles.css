@@ -61,7 +61,12 @@ span {
 }
 
 article:nth-of-type(1) img {
-	width: 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+	/*width: 100%;*/
 }
 
 .imgtext {
